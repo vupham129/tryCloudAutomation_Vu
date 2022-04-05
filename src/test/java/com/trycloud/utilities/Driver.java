@@ -35,19 +35,19 @@ Creating a private constructor, so we are closing access to the pobject of this 
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     /*
-    Create a re-usable utility methoc which will return same driver instance when we call it
+    Create a re-usable utility method which will return same driver instance when we call it
      */
     public static WebDriver getDriver(){
         if(driverPool.get()==null){
             /*
-            We read our borwserType from configuration.properties
+            We read our browserType from configuration.properties
             This way, we can control which browser is opened from outside our code, from configuration.properties
              */
             String browserType = ConfigurationReader.getProperty("browser");
 
             /*
-                Depending on the beowserType that will be return from configuration.properties file
-                swicth statement will determine the case, and open the matching browser
+                Depending on the browserType that will be return from configuration.properties file
+                switch statement will determine the case, and open the matching browser
              */
             switch (browserType){
                 case "remote-chrome":
