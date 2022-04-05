@@ -16,8 +16,8 @@ public class US1_2_step_definitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
     @When("user use username {string} and passcode {string}")
-    public void user_use_username_and_passcode(String username, String pw) {
-        loginPage.login(username, pw);
+    public void user_use_username_and_passcode(String string, String string2) {
+        loginPage.login(string, string2);
     }
     @When("user click the login button")
     public void user_click_the_login_button() {
@@ -25,10 +25,9 @@ public class US1_2_step_definitions {
     }
     @Then("verify the user should be at the dashboard page")
     public void verify_the_user_should_be_at_the_dashboard_page() {
-        String expectedURL = "dashboard";
-        String actualURL = Driver.getDriver().getCurrentUrl();
-        Assert.assertTrue("User is not at the dashboard page" , actualURL.contains(expectedURL));
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("dashboard") );
     }
+
 
 
     @When("user enter invalid {string} and {string}")

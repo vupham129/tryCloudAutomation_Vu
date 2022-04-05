@@ -18,6 +18,12 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//p[contains(@class, 'wrong')]")
     public WebElement errorMessage;
 
+    @FindBy(id = "user")
+    public WebElement userInput;
+
+    @FindBy(id = "password")
+    public WebElement passwordInput;
+
     public void login(String username, String password){
         usernameInput.sendKeys(username);
         pw.sendKeys(password);

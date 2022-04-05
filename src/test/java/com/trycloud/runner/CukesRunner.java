@@ -16,10 +16,10 @@ import org.junit.runner.RunWith;
 
         },
         features = "src/test/resources/features",
-        glue = "src/test/java/com/trycloud/step_definitions",
+        glue = "com/trycloud/step_definitions",
         dryRun = false,
-        tags ="@wip",
-        publish = true //will enable a functionality from cucumber to generate a public link to share someone
+        tags ="@us1",
+        publish = false //will enable a functionality from cucumber to generate a public link to share someone
 
 )
 public class CukesRunner {
