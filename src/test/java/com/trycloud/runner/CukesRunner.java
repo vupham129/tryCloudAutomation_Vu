@@ -16,9 +16,9 @@ import org.junit.runner.RunWith;
 
         },
         features = "src/test/resources/features",
-        glue = "com/trycloud/step_definitions",
-        dryRun = true,
-        tags ="",
+        glue = "src/test/java/com/trycloud/step_definitions",
+        dryRun = false,
+        tags ="@wip",
         publish = true //will enable a functionality from cucumber to generate a public link to share someone
 
 )

@@ -1,9 +1,10 @@
-
+@wip
 Feature: As a user, I should be able to log in.
 
+  @us1
   Scenario Outline: Verify login with valid credentials
     Given user on the login page
-    When user use username "<username>" and passcode “<password>"
+    When user use username "<username>" and passcode "<password>"
 
     And user click the login button
     Then verify the user should be at the dashboard page
@@ -14,6 +15,7 @@ Feature: As a user, I should be able to log in.
       | user89   | Userpass123 |
       | user119  | Userpass123 |
 
+  @us2
   Scenario Outline: Verify user login fail with invalid credentials
     Given user on the login page
     When user enter invalid "<username>" and "<password>"
