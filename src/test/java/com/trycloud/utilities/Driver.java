@@ -50,6 +50,7 @@ Creating a private constructor, so we are closing access to the pobject of this 
                 switch statement will determine the case, and open the matching browser
              */
             switch (browserType){
+
                 case "remote-chrome":
                     try {
                         // assign your grid server address
@@ -64,6 +65,8 @@ Creating a private constructor, so we are closing access to the pobject of this 
                         e.printStackTrace();
                     }
                     break;
+
+
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
