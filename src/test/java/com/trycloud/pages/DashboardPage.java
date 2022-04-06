@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardPage extends LoginPage{
+public class DashboardPage extends BasePage{
 
     @FindBy(xpath = "(//ul[@id='appmenu']/li)[11]//preceding-sibling::li")
     public List<WebElement> mainModules;

@@ -1,4 +1,4 @@
-@wip
+
 #3. Story: As a user, I should be accessing all the main modules of the app.
 Feature: As a user, I should be accessing all the main modules of the app.
   Scenario: Verify users accessing all the main modules of the app.
